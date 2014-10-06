@@ -1,14 +1,21 @@
 # Django settings for APc project.
+
+
 import os
 APP_DIR = os.path.dirname( globals()['__file__'] )
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 DBNAME = 'azerty'
-STATIC_URL = '/static/'
+
+
+STATICFILES_DIRS = (
+    BASE_DIR + '/static/',  # or project_static, whatever
+)
 
 
 TEMPLATE_DIRS = (
     os.path.join(BASE_DIR, 'templates'),)
+
 
 
 
@@ -82,4 +89,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
-STATIC_URL = '/static/'
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    # 'django.contrib.staticfiles.finders.DefaultStorageFinder',
+)
