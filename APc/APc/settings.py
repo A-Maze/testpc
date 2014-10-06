@@ -3,7 +3,7 @@ import os
 APP_DIR = os.path.dirname( globals()['__file__'] )
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
-DBNAME = 'components'
+DBNAME = 'azerty'
 
 TEMPLATE_DIRS = (
     os.path.join(BASE_DIR, 'templates'),)

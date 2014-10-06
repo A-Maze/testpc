@@ -23,9 +23,12 @@
     </form>
 <!-- Cycle through entries -->
     
-      {% for component in Components %}
-      <h2> {{ component.title }} </h2>
-      <p>{{ component.price }}</p>
+      {% for processoren in Processoren %}
+      <h2> {{ processoren.titel }} </h2>
+      <p>{{ processoren.prijs }}</p>
+      <p>{{ processoren.categorie }}</p>
+      <p><img src={{ processoren.image }}></p>
+      <p>{{ processoren.omschrijving }}</p>
      
      
     {% endfor %}

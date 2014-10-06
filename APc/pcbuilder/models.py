@@ -5,6 +5,9 @@ from APc.settings import DBNAME
 
 connect(DBNAME)
 
-class Component(Document):
-    title = StringField(max_length=120, required=True)
-    price = StringField(max_length=500, required=True)
+class Processoren(Document):
+    prijs = StringField(max_length=120, required=True)
+    categorie = StringField(max_length=500, required=True)
+    titel = StringField(max_length=500, required=True)
+    image = StringField(max_length=500, required=True)
+    omschrijving = StringField(max_length=500, required=True)
